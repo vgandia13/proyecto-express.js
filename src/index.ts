@@ -28,11 +28,6 @@ app.use((req, res, next) => {
 // 3. Leer bodies JSON
 app.use(express.json());
 
-// 4. Rutas
-app.get("/", (_req, res) => {
-  res.send("Mi primera API con Libros Express");
-});
-
 app.get("/api/hello", (req, res) => {
   const name = req.query.name;
 

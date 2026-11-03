@@ -4,8 +4,19 @@ import booksData from "../data/books.json" with { type: "json" };
 
 const router = Router();
 
-router.get("/", (_req: Request, res: Response) => {
-  res.send("Bienvenido a la API de libros");
+router.get("/", (req: Request, res: Response) => {
+  const contains = req.query.contains;
+
+  if (contains === undefined) {
+    res.json(booksData);
+    return;
+  }
+
+  const query = String(contains).toLowerCase();
+  const filteredBooks = booksData.filter((book) => {
+    return book.title.toLowerCase().includes(query);
+  });
+  res.json(filteredBooks);
 });
 
 export default router;
