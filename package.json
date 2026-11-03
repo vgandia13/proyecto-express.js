@@ -2,10 +2,10 @@
   "name": "proyecto-express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
-    "start": "node index.ts",
-    "dev": "node --watch index.ts",
+    "start": "node src/index.ts",
+    "dev": "node --watch src/index.ts",
     "typecheck": "tsc"
   },
   "keywords": [],

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2022",
     "module": "nodenext",
     "types": ["node"],
     "strict": true,
@@ -8,6 +8,8 @@
     "verbatimModuleSyntax": true,
     "erasableSyntaxOnly": true,
     "allowImportingTsExtensions": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true
   }
 }
